@@ -99,14 +99,13 @@ class CategoriesParser(Parser5ka):
             category_path = self.save_dir.joinpath(file_name)
             self.save(category, category_path)
 
-
 def get_dir_path(dir_name: str) -> Path:
     dir_path = Path(__file__).parent.joinpath(dir_name)
     if not dir_path.exists():
         dir_path.mkdir()
     return dir_path
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     url = 'https://5ka.ru/api/v2/special_offers/recommended/'
     save_dir = get_dir_path('products')
     parser = Parser5ka(url, save_dir)
