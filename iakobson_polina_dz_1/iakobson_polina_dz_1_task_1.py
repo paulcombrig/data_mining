@@ -62,7 +62,7 @@ class Parser5ka:
 
     def save(self, data:dict, file_path = Path):
         file_path.write_text(json.dumps(data))
-#        file_path.write_text(json.dimps(data, ensure_ascii=False)
+#        file_path.write_text(json.dumps(data, ensure_ascii=False)
 
 def get_dir_path(dir_name: str) -> Path:
     dir_path = Path(__file__).parent.joinpath(dir_name)
